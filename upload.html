@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма релиза | AuraDrop</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1c1c1c;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #e50914;
+      margin-bottom: 20px;
+    }
+    .form-section {
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .required::after {
+      content: " *";
+      color: red;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      color: #e50914;
+      text-decoration: none;
+    }
+    .back-button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Форма релиза</h2>
+
+    <div class="form-section">
+      <label class="required">Название релиза</label>
+      <input type="text" name="release_title">
+      <label>Версия (опционально)</label>
+      <input type="text" name="version">
+      <label>Язык метаданных</label>
+      <select name="language">
+        <option>Русский</option>
+        <option>Английский</option>
+      </select>
+      <label>Баркод EAN/UPC</label>
+      <input type="text" name="barcode">
+      
+      <label>Артикул лейбла</label>
+      <input type="text" name="catalog_number">
+    </div>
+
+    <div class="form-section">
+      <label class="required">(P) Права на фонограмму</label>
+      <input type="text" name="phonogram_rights">
+      <label class="required">© Copyright</label>
+      <input type="text" name="copyright">
+      <label class="required">Лейбл</label>
+      <input type="text" name="label">
+      <label class="required">Тип релиза</label>
+      <select name="release_type">
+        <option>Single</option>
+        <option>EP</option>
+        <option>Album</option>
+      </select>
+      <label class="required">Жанр</label>
+      <input type="text" name="genre">
+    </div>
+
+    <div class="form-section">
+      <label class="required">Отображаемый артист</label>
+      <input type="text" name="display_artist">
+      <label class="required">Основной артист(ы)</label>
+      <input type="text" name="main_artist">
+      <label>Контрибуторы</label>
+      <input type="text" name="contributors">
+      <small>Комментатор | Композитор и т.п.</small>
+      <label class="required">Издатель</label>
+      <input type="text" name="publisher" value="Label Control">
+    </div>
+
+    <a class="back-button" href="index.html">← На главную</a>
+  </div>
+</body>
+</html>
